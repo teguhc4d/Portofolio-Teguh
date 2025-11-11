@@ -1,0 +1,483 @@
+/* Atur ulang gaya default browser */
+* {
+    /* Menggunakan border-box: padding dan border tidak menambah ukuran elemen, penting untuk tata letak */
+    box-sizing: border-box; 
+    /* Menghilangkan margin default dari semua elemen */
+    margin: 0; 
+    /* Menghilangkan padding default dari semua elemen */
+    padding: 0; 
+    /* Menetapkan font default */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Menerapkan transisi halus untuk semua properti (untuk efek hover) */
+    transition: all 0.3s ease; 
+}
+
+/* Gaya dasar body */
+body {
+    /* Tinggi minimal 100% dari viewport height */
+    min-height: 100vh;
+    /* Warna latar belakang abu-abu muda */
+    background-color: #f7f7f7; 
+}
+
+/* --- HEADER/NAVIGASI --- */
+header {
+    /* Memastikan header tetap di atas saat scroll */
+    position: fixed; 
+    /* Lebar penuh */
+    width: 100%; 
+    /* Posisi di paling atas */
+    top: 0; 
+    /* Pastikan header di atas konten lain */
+    z-index: 1000; 
+    /* Warna navbar */
+    background-color: #007bff; 
+    /* Padding di dalam header */
+    padding: 15px 50px; 
+    /* Menggunakan flexbox untuk penataan item */
+    display: flex; 
+    /* Meratakan item secara vertikal */
+    align-items: center; 
+    /* Menyebar ruang antara logo dan navbar */
+    justify-content: space-between; 
+    /* Bayangan halus di bawah header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Gaya Logo */
+.logo {
+    /* Warna teks putih */
+    color: white; 
+    /* Ukuran font lebih besar */
+    font-size: 1.6rem; 
+    /* Teks tebal */
+    font-weight: bold; 
+    /* Menghilangkan garis bawah tautan */
+    text-decoration: none; 
+}
+
+/* Gaya Tautan Navigasi */
+.navbar a {
+    /* Warna teks putih */
+    color: white; 
+    /* Menghilangkan garis bawah tautan */
+    text-decoration: none; 
+    /* Padding internal tautan */
+    padding: 10px 15px; 
+    /* Jarak antar tautan */
+    margin-left: 10px; 
+    /* Ukuran font */
+    font-size: 1rem; 
+    /* Sudut membulat */
+    border-radius: 5px;
+}
+
+/* Efek hover pada tautan navigasi */
+.navbar a:hover {
+    /* Latar belakang transparan saat di-hover */
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+/* Menu Toggle (Hamburger) - Tersembunyi di desktop */
+.menu-toggle {
+    /* Sembunyikan secara default */
+    display: none; 
+    /* Kursor tangan saat diarahkan */
+    cursor: pointer;
+    /* Lebar ikon */
+    width: 25px;
+    /* Tinggi ikon */
+    height: 25px;
+    /* Menggunakan flexbox untuk garis-garis */
+    flex-direction: column; 
+    /* Menyebar ruang antara garis */
+    justify-content: space-around; 
+}
+
+.menu-toggle span {
+    /* Display blok untuk setiap garis */
+    display: block; 
+    /* Tinggi garis */
+    height: 3px; 
+    /* Lebar penuh */
+    width: 100%; 
+    /* Warna garis putih */
+    background-color: white; 
+    /* Sudut membulat */
+    border-radius: 3px; 
+}
+
+/* --- KONTEN UTAMA & SECTION --- */
+main {
+    /* Padding atas untuk memberi ruang dari fixed header */
+    padding-top: 80px; 
+}
+
+/* Gaya setiap section */
+.section {
+    /* Padding internal section */
+    padding: 60px 50px; 
+    /* Latar belakang putih */
+    background-color: white; 
+    /* Garis bawah pemisah */
+    border-bottom: 1px solid #eee;
+}
+
+/* Gaya Judul Section */
+.section h2 {
+    /* Margin bawah judul */
+    margin-bottom: 30px; 
+    /* Warna judul biru */
+    color: #007bff; 
+    /* Teks rata tengah */
+    text-align: center;
+    /* Ukuran font besar */
+    font-size: 2rem;
+}
+
+/* --- BAGIAN TENTANG (PROFILE CARD) --- */
+.profile-card {
+    /* Menggunakan Flexbox */
+    display: flex; 
+    /* Memungkinkan wrapping di mobile */
+    flex-wrap: wrap; 
+    /* Lebar maksimal card */
+    max-width: 900px;
+    /* Memusatkan card */
+    margin: 0 auto;
+    /* Padding internal */
+    padding: 30px;
+    /* Sudut membulat */
+    border-radius: 10px;
+    /* Bayangan card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    /* Latar belakang putih */
+    background-color: #ffffff;
+}
+
+.profile-image {
+    /* Lebar tetap 180px untuk foto (fleksibilitas 0) */
+    flex: 0 0 180px; 
+    /* Margin kanan untuk jarak dari info */
+    margin-right: 30px;
+    /* Teks rata tengah */
+    text-align: center;
+}
+
+.profile-image img {
+    /* Ukuran foto */
+    width: 150px; 
+    /* Tinggi foto */
+    height: 150px; 
+    /* Membuat foto menjadi lingkaran */
+    border-radius: 50%; 
+    /* Memastikan gambar mengisi area tanpa distorsi */
+    object-fit: cover; 
+    /* Border biru */
+    border: 5px solid #007bff;
+}
+
+.profile-info {
+    /* Mengisi sisa ruang yang tersedia */
+    flex: 1; 
+}
+
+.profile-info h3 { color: #333; margin-bottom: 5px; }
+.profile-info h4 { color: #007bff; margin-bottom: 15px; font-weight: normal; }
+
+
+/* --- BAGIAN RIWAYAT PENDIDIKAN (TIMELINE) --- */
+.timeline-container {
+    /* Menggunakan flexbox untuk susunan vertikal */
+    display: flex;
+    flex-direction: column; 
+    /* Lebar maksimal timeline */
+    max-width: 800px;
+    /* Memusatkan timeline */
+    margin: 0 auto;
+    /* Padding atas/bawah */
+    padding: 20px 0;
+    /* Set posisi relatif untuk mengatur garis vertikal */
+    position: relative; 
+}
+
+/* Garis vertikal Timeline (Pseudo-element) */
+.timeline-container::before {
+    /* Membuat konten kosong */
+    content: ''; 
+    /* Posisi absolut */
+    position: absolute;
+    /* Mulai dari atas */
+    top: 0;
+    /* Sampai bawah */
+    bottom: 0;
+    /* Posisi di tengah (50% dari kiri) */
+    left: 50%; 
+    /* Tebal garis */
+    width: 2px; 
+    /* Warna garis abu-abu */
+    background-color: #ddd; 
+    /* Koreksi geser agar garis benar-benar di tengah */
+    transform: translateX(-50%); 
+}
+
+.timeline-item {
+    /* Card untuk setiap item pendidikan */
+    background-color: #fff;
+    /* Border tipis */
+    border: 1px solid #e0e0e0;
+    /* Sudut membulat */
+    border-radius: 8px;
+    /* Padding internal */
+    padding: 20px;
+    /* Jarak antar item di mobile */
+    margin-bottom: 20px; 
+    /* Lebar penuh (di mobile) */
+    width: 100%;
+    /* Bayangan card */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* Set posisi relatif untuk mengatur titik lingkaran */
+    position: relative;
+}
+
+/* Bullet Point/Lingkaran pada Timeline (Pseudo-element) */
+.timeline-item::before {
+    /* Membuat konten kosong (lingkaran) */
+    content: '';
+    /* Posisi absolut */
+    position: absolute;
+    /* Ukuran lingkaran */
+    width: 15px; 
+    height: 15px; 
+    /* Bentuk lingkaran */
+    border-radius: 50%; 
+    /* Warna lingkaran biru */
+    background-color: #007bff; 
+    /* Border putih agar kontras dengan garis tengah */
+    border: 3px solid white; 
+    /* Pastikan di atas garis tengah */
+    z-index: 10; 
+}
+
+.timeline-item h3 { color: #333; margin-bottom: 5px; }
+.timeline-item .school-name { color: #007bff; font-weight: bold; }
+.timeline-item .details { color: #777; font-size: 0.9rem; margin-top: 5px; }
+
+
+/* --- BAGIAN PROYEK (PROJECT GRID) --- */
+.project-grid {
+    /* Menggunakan CSS Grid untuk tata letak card */
+    display: grid; 
+    /* Membuat kolom responsif: minimal 300px per kolom, menyesuaikan hingga 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    /* Jarak antar card */
+    gap: 25px; 
+    /* Lebar maksimal grid */
+    max-width: 1200px;
+    /* Memusatkan grid */
+    margin: 0 auto;
+}
+
+.project-card {
+    /* Latar belakang putih */
+    background-color: #fff;
+    /* Border card */
+    border: 1px solid #ddd;
+    /* Sudut membulat */
+    border-radius: 8px;
+    /* Memastikan konten (gambar) tidak keluar dari sudut membulat */
+    overflow: hidden; 
+    /* Bayangan card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Teks rata tengah */
+    text-align: center;
+    /* Padding bawah */
+    padding-bottom: 20px;
+}
+
+.project-card img {
+    /* Lebar gambar 100% dari card */
+    width: 100%;
+    /* Tinggi tetap */
+    height: 180px;
+    /* Memastikan gambar mengisi area */
+    object-fit: cover;
+    /* Margin bawah */
+    margin-bottom: 15px;
+}
+
+.project-card h3 { color: #007bff; margin: 0 15px 10px; }
+.project-desc { padding: 0 15px 15px; font-size: 0.95rem; color: #555; }
+.project-link {
+    /* Tautan sebagai tombol */
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* --- FOOTER --- */
+footer {
+    /* Latar belakang gelap */
+    background-color: #333; 
+    /* Teks putih */
+    color: white; 
+    /* Teks rata tengah */
+    text-align: center; 
+    /* Padding atas bawah */
+    padding: 20px 0; 
+    /* Ukuran font kecil */
+    font-size: 0.9rem;
+}
+
+
+/* ################################################### */
+/* --- MEDIA QUERIES UNTUK RESPONSIVITAS --- */
+/* ################################################### */
+
+/* Aturan untuk DESKTOP (Lebar > 768px) - Mengatur posisi Timeline */
+@media (min-width: 769px) {
+
+    /* Item timeline bergantian (kiri-kanan) */
+    .timeline-item {
+        /* Reset margin-bottom dari mobile */
+        margin-bottom: 0; 
+    }
+    
+    .timeline-item:nth-child(even) {
+        /* Item genap (kanan) */
+        align-self: flex-end; 
+        /* Geser ke kanan sejauh 50% dari kontainer */
+        margin-left: 50%; 
+        /* Lebar item 45% */
+        width: 45%; 
+        /* Tambah margin-bottom di sini untuk item kanan */
+        margin-bottom: 30px;
+    }
+
+    .timeline-item:nth-child(odd) {
+        /* Item ganjil (kiri) */
+        align-self: flex-start;
+        /* Lebar item 45% */
+        width: 45%; 
+        /* Tambahkan margin bawah */
+        margin-bottom: 30px; 
+    }
+
+    /* Posisi Bullet Point/Lingkaran untuk item KIRI */
+    .timeline-item:nth-child(odd)::before {
+        /* Posisikan di tepi kanan card item */
+        right: -31px; 
+        top: 25px;
+    }
+
+    /* Posisi Bullet Point/Lingkaran untuk item KANAN */
+    .timeline-item:nth-child(even)::before {
+        /* Posisikan di tepi kiri card item */
+        left: -31px; 
+        top: 25px;
+    }
+}
+
+
+/* Aturan untuk MOBILE (Lebar maksimal 768px) */
+@media (max-width: 768px) {
+    /* Tampilkan ikon menu toggle */
+    .menu-toggle {
+        display: flex; 
+    }
+
+    /* Sembunyikan navbar default */
+    .navbar {
+        display: none; 
+        position: absolute; 
+        /* Posisikan di bawah header mobile */
+        top: 56px; 
+        width: 100%; 
+        left: 0; 
+        background-color: #007bff; 
+        /* Mengatur susunan menu vertikal */
+        flex-direction: column; 
+        /* Awalnya geser ke atas (tersembunyi) */
+        transform: translateY(-100%); 
+        /* Transisi untuk animasi slide */
+        transition: transform 0.4s ease-out;
+    }
+
+    /* Menampilkan navbar ketika kelas 'active' ditambahkan oleh JS */
+    .navbar.active {
+        display: flex;
+        /* Geser ke posisi terlihat */
+        transform: translateY(0); 
+    }
+
+    /* Gaya tautan di navbar mobile */
+    .navbar a {
+        width: 100%; 
+        text-align: center; 
+        padding: 15px 20px; 
+        margin: 0; 
+        /* Garis pemisah antar menu */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    }
+    
+    /* Mengurangi padding section dan header untuk mobile */
+    header {
+        padding: 10px 20px; 
+    }
+
+    .section {
+        padding: 40px 20px; 
+    }
+    
+    /* --- RESPONSIF PROFILE CARD (TENTANG) --- */
+    .profile-card {
+        /* Ubah tata letak menjadi vertikal */
+        flex-direction: column; 
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-image {
+        /* Foto di tengah */
+        flex: none; 
+        margin: 0 0 20px 0;
+    }
+    
+    .profile-image img {
+        /* Ukuran foto lebih kecil di mobile */
+        width: 120px; 
+        height: 120px; 
+    }
+
+    /* --- RESPONSIF TIMELINE PENDIDIKAN (Jadi Card Tumpuk) --- */
+    .timeline-container::before {
+        /* Menghilangkan garis vertikal di mobile */
+        display: none; 
+    }
+    
+    .timeline-item {
+        width: 100%; 
+        margin: 0; 
+        /* Jarak antar card */
+        margin-bottom: 20px;
+        /* Padding kiri untuk ruang titik */
+        padding-left: 35px; 
+    }
+    
+    /* Posisi Bullet Point/Lingkaran di mobile */
+    .timeline-item::before {
+        left: 10px; 
+        top: 25px;
+        /* Border biru untuk kontras */
+        border: 3px solid #007bff; 
+    }
+
+    /* --- RESPONSIF PROJECT GRID --- */
+    .project-grid {
+        /* Mengatur agar grid hanya 1 kolom di mobile */
+        grid-template-columns: 1fr; 
+    }
+}

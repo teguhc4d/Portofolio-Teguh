@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Teguh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="https://smkn1cikaum.sch.id/vocational/public/uploads/1/2022-08/logo.png" class="logo">Logo</a>
+        <nav class="navbar">
+            <a href="#tentang">Tentang Saya</a>
+            <a href="#pendidikan">Pendidikan</a>
+            <a href="#proyek">Proyek</a>
+        </nav>
+        <!-- Fungsinya adalah untuk membuat tombol hamburger (menu tiga garis) yang umum digunakan pada tampilan mobile (HP) . -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Fungsinya adalah untuk membuat tombol hamburger (menu tiga garis) yang umum digunakan pada tampilan mobile (HP) . -->
+    </header>
+
+    <main>
+        <section id="tentang" class="section">
+            <h2>Tentang Saya</h2>
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="teguh.jpeg" alt="Foto Teguh">
+                </div>
+                <div class="profile-info">
+                    <h3>Teguh Gunawan</h3>
+                    <h4>Saya Seorang Siswa Smk Negeri 1 Cikaum</h4>
+                    <p>Saya tertarik dalam bidang teknologi informasi dan pengembangan perangkat lunak. Saya memiliki keterampilan dalam pemrograman, desain web, dan manajemen proyek. Saya selalu bersemangat untuk belajar hal-hal baru dan mengembangkan kemampuan saya di bidang ini.</p>
+                </div>
+            </div>
+        </section>
+        <section id="pendidikan" class="section">
+            <h2>Riwayat Pendidikan</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h3>Sekolah Dasar Negeri Gandamanah</h3>
+                    <p class="school-name">SDN Gandamanah</p>
+                    <p class="details">Tahun Ajaran: | 1997 - 2003</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Sekolah Menengah Negeri 4 Subang</h3>
+                    <p class="school-name">SMPN 4 Subang</p>
+                    <p class="details">Tahun Ajaran: | 2003 - 2006</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyek" class="section">
+            <h2>Proyek yang pernah dibuat</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="1.png" alt="Gambar Proyek 1">
+                    <h3>Aplikasi Agenda Kelas</h3>
+                    <p class="project-desc">Aplikasi agenda kelas berbasis CRUD, dengan menggunakan PHP MYSQL dan LARAVEL</p>
+                    <a href="https://teguhc4d.github.io/apk-agenda-kelas-v3/" target="_blank" class="project-link">Lihat Demo</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="2.png" alt="Gambar Proyek 2">
+                    <h3>Aplikasi Magang</h3>
+                    <p class="project-desc">Aplikasi magang berbasis CRUD, dengan menggunakan PHP MYSQL dan LARAVEL</p>
+                    <a href="http://absenmagang.free.nf/login.php" target="_blank" class="project-link">Lihat Demo</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portofolio | TeguhC4d [Rekayasa Perangkat Lunak</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
